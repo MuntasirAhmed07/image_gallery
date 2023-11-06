@@ -1,0 +1,204 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  height: auto;
+  width: 80%;
+}
+
+.gallery-text{
+  margin: 0;
+  font-size: large;
+  font-weight: bold;
+}
+
+
+.file-count{
+  display: flex;
+  align-items: center;
+}
+
+
+.file-checked input[type="checkbox"] {
+  /* Reset some of the styles if you want it to appear normal */
+  position: relative;
+  z-index: 1; /* set to 1 or remove if not needed */
+  width: 100%;
+  height: 20px;
+  top: auto;
+  margin-left: 20px; /* Add some space between the checkbox and the text */
+  opacity: 0; /* Make it fully visible */
+  cursor: pointer;
+}
+
+.file-checked input[type="checkbox"]:checked{
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+
+.file-selected{
+  font-size: large;
+  font-weight: bold;
+}
+
+.delete-button{
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: large;
+  color: red;
+  cursor: pointer;
+}
+
+hr {
+  height: 1.5px;
+  background-color: silver;
+  border: none; 
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+.image-gallery {
+    height: 60%;
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    direction: ltr;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 1.5rem 1.5rem; 
+    grid-template-areas: 
+      "main-img main-img . . ."
+      "main-img main-img . . ."
+      ". . . . ."; 
+  }
+
+  
+
+.featured-image { 
+    grid-area: main-img;
+    border: 1.7px solid silver;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+.regular-image {
+    border: 1.7px solid silver;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+.featured-image:hover  .hover-overlay{
+    transition: all 0.3s ease-in;
+    opacity: 0.5;
+  }
+
+.regular-image:hover  .hover-overlay{
+    transition: all 0.3s ease-in;
+    opacity: 0.5;
+  }
+
+
+.regular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+.image{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: black;
+  }
+
+  
+
+
+input[type="checkbox"]{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 20px;
+    left: -44%;
+    top: 10px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.is-checked{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    z-index: 900;
+    background-color: silver;
+    transition: all 0.3s ease-in;
+}
+
+.featured-image:hover input{
+    transition: all 0.3s ease-in;
+    opacity: 1;
+}
+
+.regular-image:hover input{
+    transition: all 0.3s ease-in;
+    opacity: 1;
+}
+
+
+.add-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: large;
+  font-weight: 500;
+  border: 1.9px dashed silver;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: whitesmoke;
+}

@@ -1,0 +1,42 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  height: 95%;
+  width: 95%;
+  margin: 15px auto 15px;
+  border-radius: 15px;
+}
+
+
+
+/* .img-container {
+  height: 70vh;
+  width: 85vw;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(3, 1fr); 
+  gap: 1.5rem 1.5rem; 
+  grid-template-areas: 
+    "main-img main-img . . ."
+    "main-img main-img . . ."
+    ". . . . ."; 
+}
+.blck { grid-area: main-img;
+   border: 1px solid black;
+   border-radius: 10px;
+}
+
+.k{
+  background-color: black;
+}
+
+.blck img {
+  width: 90%;
+  height: 100%;
+  object-fit: fit;
+} */
